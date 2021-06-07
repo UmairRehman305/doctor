@@ -13,6 +13,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/test', function () {
+    return 'Hello World';
 });
+
+// COmponent Routes 
+Route::view('/header', 'header');
+
+// index
+Route::view('/', 'index');
+
+// Contact Us
+Route::view('/contact-us', 'pContactUs');
+
+// About Us
+Route::view('/about-us', 'pAboutUs');
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
